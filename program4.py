@@ -1,17 +1,22 @@
 # Reverse the list
-
-input_list = [4, 6, 3, 8, 5]
-print("Initial list : " % input_list)
 #using two pointer approach
 
-start = 0
-end = len(input_list) - 1
+def list_reverse(input_list):
+    start = 0
+    end = len(input_list) - 1
 
-while start < end:
-    temp = input_list[start]
-    input_list[start] = input_list[end]
-    input_list[end] = temp
-    start += 1
-    end -= 1
+    while start < end:
+        temp = input_list[start]
+        input_list[start] = input_list[end]
+        input_list[end] = temp
+        start += 1
+        end -= 1
 
-print(input_list)
+def main():
+    input_list = [4, 6, 3, 8, 5]
+    print("Initial list : {}" .format(input_list))
+    list_reverse(input_list)
+    print("reversed list : {}" .format(input_list))
+
+if __name__=='__main__':
+    main() 
