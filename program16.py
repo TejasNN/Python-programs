@@ -9,7 +9,7 @@ def binarySearch(input:list, value:int) -> bool:
     
     while(iStart <= iEnd):
         iMid = iStart + int((iEnd - iStart) / 2)
-        if(input[iMid] == value):
+        if(input[iMid] == value or input[iStart] == value or input[iEnd] == value):
             bFlag = True
             break
         elif (input[iMid] < value):
